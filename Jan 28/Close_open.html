@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>for open and close method</h2>
+    <button id="demo" onclick="myopen()"> open window</button>
+    <button id="demo1" onclick="myclose()">Close window</button>
+    <button id="demo2" onclick="myresize()">resize window</button>
+    <p id="demo3">for inner width and inner height</p>
+    <script>
+        let mywindow;
+        function myopen() {
+            mywindow = window.open("", "", "width=200,height=100");
+        }
+        function myclose() {
+            window.close;
+        }
+        function myresize() {
+            mywindow.resizeTo(400, 400);
+        }
+
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        document.getElementById("demo3").innerHTML = "Width: " + w + "<br>Height: " + h;
+    </script>
+</body>
+
+</html>
